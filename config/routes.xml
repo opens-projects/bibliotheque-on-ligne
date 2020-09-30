@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<routes>
+	<route url="/" controller="Pages" action="index" />
+	<route url="/ouvrages/?" controller="ouvrages" action="index" />
+	<route url="/ouvrages/([a-z0-9\-]+)" controller="ouvrages" action="index" vars="slug" />
+	<route url="/ouvrages/([a-z0-9\-]+)([_0-9]+)" controller="ouvrages" action="categorie" vars="slug,id_cat" />
+	<route url="/ouvrages/([a-z0-9\-]+)([_0-9]+)/([a-z0-9\-]+)([_0-9]+)" controller="ouvrages" action="ouvrage" vars="slug,id_cat,slug_ouvrage,id_ouvrage" />
+	<route url="/connexion/?" controller="connexion" action="login" />
+	<route url="/deconnexion/?" controller="connexion" action="logout" />
+	<route url="/inscription/?" controller="connexion" action="register" />
+	<route url="/publier/?" controller="ouvrages" action="post" />
+	<route url="/abonnement/?" controller="subscribe" action="index" />
+	<route url="/abonnement/([1-9])" controller="subscribe" action="subscribe" vars="id_abon" />
+	<route url="/search/?" controller="Pages" action="search" />
+</routes>
